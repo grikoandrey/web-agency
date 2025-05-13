@@ -1,0 +1,13 @@
+<div class="articles-item" *ngIf="article">
+  <div class="articles-item-main">
+    <div class="articles-item-image"
+         [style.background-image]="'url(' + serverStaticPath + article.image + ')'"></div>
+    <div class="articles-item-category">{{ article.category }}</div>
+    <div class="articles-item-title">{{ article.title.length > 80 ? (article.title | slice:0:80) + '...' : article.title }}</div>
+    <div class="articles-item-text">{{ article.description.length > 150 ? (article.description | slice:0:150) + '...' : article.description }}</div>
+  </div>
+  <div class="articles-item-extra">
+    <a [routerLink]="'/articles/' + article.url"
+       class="articles-item-detail">Читать дальше</a>
+  </div>
+</div>

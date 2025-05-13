@@ -1,0 +1,121 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+footer.footer {
+  padding: 40px 0 54px 0;
+  background-color: #B9D5FD;
+
+  .container {
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 40px;
+
+      .footer-top-menu {
+        nav ul {
+          display: flex;
+          gap: 20px;
+
+          li {
+
+            a {
+              &.active {
+                color: $light-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-center {
+      display: flex;
+      align-items: start;
+      gap: 60px;
+      margin-bottom: 6px;
+
+      .footer-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .footer-contact-head {
+          font-weight: 500;
+          color: $light-text-color;
+          margin-bottom: 10px;
+        }
+
+        &.footer-address {
+          max-width: 253px;
+
+          .footer-contact-info {
+            line-height: 130%;
+          }
+        }
+
+        &.footer-phone {
+          .footer-contact-info {
+            margin-bottom: 10px;
+          }
+
+          .button {
+            font-weight: 500;
+          }
+        }
+
+        &.footer-email {
+          .footer-contact-info {
+            font-size: 14px;
+          }
+        }
+
+        &.footer-social {
+          .footer-contact-info {
+            display: flex;
+            gap: 12px;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      color: $light-text-color;
+    }
+  }
+}
+
+.popup {
+  display: none;
+  margin: 0 auto;
+  width: 727px;
+  padding: 95px 152px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  .popup-close {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 30px;
+  }
+
+  .popup-title {
+    @include head-lora-38;
+    margin-bottom: 20px;
+  }
+
+  .popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .button {
+      margin-top: 15px;
+      font-weight: 400;
+    }
+  }
+}

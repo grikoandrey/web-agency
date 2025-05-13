@@ -1,0 +1,57 @@
+@import "../../../../assets/styles/variables";
+
+header.header {
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+
+      .header-menu {
+        margin-right: 257px;
+
+        nav ul {
+          display: flex;
+          gap: 30px;
+
+          li {
+
+            a {
+              &.active {
+                color: $light-text-color;
+              }
+            }
+          }
+        }
+      }
+
+      .header-phone {
+        margin-right: 141px;
+
+        a {
+          color: $light-text-color;
+        }
+      }
+
+      .header-actions {
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          span {
+            color: $dark-text-color;
+          }
+        }
+      }
+    }
+  }
+}

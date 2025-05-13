@@ -1,0 +1,403 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.main {
+  margin-bottom: 120px;
+
+  .container {
+    .main-carousel {
+      position: relative;
+
+      .main-item {
+        height: 500px;
+        padding-left: 80px;
+        align-content: center;
+
+        .main-item-announcement {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 12px;
+          letter-spacing: 5px;
+          color: $light-text-color;
+        }
+
+        .main-item-title {
+          font-family: 'Lora', sans-serif;
+          font-size: 50px;
+          font-weight: 400;
+          color: #FFFFFF;
+          max-width: 575px;
+          margin-bottom: 20px;
+        }
+
+        .main-item-text {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 24px;
+          color: #FFFFFF;
+          width: 456px;
+        }
+
+        .button {
+          margin-top: 40px;
+          width: 163px;
+        }
+      }
+
+      .main-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: 11px;
+            z-index: 1;
+          }
+
+          &.move-forward {
+            right: 11px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  margin-bottom: 120px;
+
+  .container {
+
+    .services-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-items {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      .services-item {
+        height: 498px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .services-item-main {
+          .services-item-image {
+            margin-bottom: 15px;
+          }
+
+          .services-item-title {
+            font-size: 20px;
+            color: $light-text-color;
+            font-weight: 500;
+            margin-bottom: 10px;
+          }
+
+          .services-item-text {
+            font-size: 14px;
+            line-height: 130%;
+          }
+        }
+
+        .services-item-extra {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .services-item-extra-price {
+            font-size: 20px;
+            font-weight: 600;
+            color: $light-text-color;
+          }
+
+          .button {
+            min-width: 163px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  margin-bottom: 120px;
+
+  .container {
+    display: flex;
+    gap: 68px;
+
+    .about-image {
+      border-radius: 5px;
+    }
+
+    .about-info {
+      .about-info-description {
+
+        .about-info-title {
+          @include head-lora-38;
+          margin-bottom: 20px;
+        }
+
+        .about-info-text {
+          font-size: 14px;
+          line-height: 130%;
+          max-width: 633px;
+          margin-bottom: 40px;
+
+          span {
+            font-weight: 500;
+          }
+        }
+
+      }
+
+      .about-info-advantages {
+        .about-info-advantages-title {
+          @include head-lora-38;
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        .about-info-advantages-items {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          .about-info-advantages-item {
+            max-width: 316px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .about-info-advantages-item__num {
+              font-family: 'Lora', sans-serif;
+              font-size: 50px;
+              font-weight: 500;
+              color: $light-text-color;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: #B9D5FD;
+              min-width: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: end;
+              transition: all .5s ease-in-out;
+
+              span {
+                position: relative;
+                top: 5px;
+              }
+            }
+
+            .about-info-advantages-item__text {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pop-articles {
+  margin-bottom: 120px;
+
+  .container {
+
+    .pop-articles-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .pop-articles-items {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-bottom: 40px;
+
+      .pop-articles-item {
+        height: 571px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .pop-articles-item-main {
+          position: relative;
+
+          .pop-articles-item-image {
+            margin-bottom: 15px;
+          }
+
+          .pop-articles-item-category {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: $light-text-color;
+            font-size: 11px;
+            padding: 10px 18px;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+          }
+
+          .pop-articles-item-title {
+            font-size: 20px;
+            color: $light-text-color;
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+
+          .pop-articles-item-text {
+            font-size: 14px;
+            line-height: 130%;
+          }
+        }
+
+        .pop-articles-item-extra {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .pop-articles-item-button {
+            color: $light-text-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .pop-articles-blog {
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: $light-text-color;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+.reviews {
+  margin: 120px 0;
+
+  .container {
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        box-sizing: border-box;
+        border: 2px solid $light-text-color;
+        border-radius: 5px;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .review-item-name {
+            font-weight: 600;
+            color: $light-text-color;
+          }
+        }
+
+        .review-item-text {
+          line-height: 140%;
+          color: $dark-text-color;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -31px;
+          }
+
+          &.move-forward {
+            right: -31px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+  margin-bottom: 120px;
+
+  .container {
+    display: flex;
+    gap: 26px;
+
+    .contacts-map {
+      min-width: 607px;
+    }
+
+    .contacts-info {
+      padding-right: 106px;
+
+      .contacts-info-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .contacts-info-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .contacts-info-item {
+          .contacts-info-item-head {
+            margin-bottom: 10px;
+            color: $light-text-color;
+            font-size: 20px;
+            font-weight: 500;
+          }
+
+          .contacts-info-item-text {
+            font-size: 14px;
+
+            &.contacts-info-item-social {
+              display: flex;
+              gap: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

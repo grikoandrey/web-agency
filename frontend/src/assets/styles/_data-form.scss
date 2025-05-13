@@ -1,0 +1,111 @@
+@import "./variables";
+@import "./mixins";
+
+.data-form {
+  max-width: 645px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .data-form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .data-form-label {
+      font-weight: 500;
+      color: $grey-text-color;
+    }
+
+    .data-form-label-additional {
+      line-height: 130%;
+      color: $grey-text-color;
+      margin-bottom: 20px;
+      max-width: 528px;
+    }
+
+    .data-form-types {
+      display: flex;
+      align-items: center;
+      max-width: 340px;
+      box-sizing: border-box;
+      border: 1px solid #519057;
+      border-radius: 3px;
+
+      .data-form-type-item {
+        font-size: 18px;
+        padding: 13px 35px;
+        color: $grey-text-color;
+        background-color: transparent;
+        cursor: pointer;
+
+        &.active {
+          color: #FFFFFF;
+          background-color: #519057;
+        }
+      }
+    }
+
+    .data-form-inputs {
+      display: grid;
+      gap: 8px;
+
+      .input[type=text] {
+        height: 53px;
+        padding-left: 20px;
+
+        &::placeholder {
+          font-size: 14px;
+          color: #A8ABA7;
+        }
+      }
+
+      &.personal-data-inputs {
+        grid-template-columns: repeat(3, 210px);
+      }
+
+      &.address-inputs {
+        grid-template-columns: repeat(2, 125px) 162px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+                "street street street"
+                "house entrance flat";
+
+        .street {
+          grid-area: street;
+        }
+
+        .house {
+          grid-area: house;
+        }
+
+        .entrance {
+          grid-area: entrance;
+        }
+
+        .flat {
+          grid-area: flat;
+        }
+      }
+    }
+
+    .data-form-radio {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .data-form-radio-block {
+        display: flex;
+        gap: 12px;
+
+        label {
+          color: $grey-text-color;
+        }
+
+        input:checked + label {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

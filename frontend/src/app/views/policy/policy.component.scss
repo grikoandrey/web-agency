@@ -1,0 +1,52 @@
+@import "../../../assets/styles/mixins";
+
+.policy {
+  margin: 80px 0 120px 0;
+
+  .container {
+    .policy-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .policy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      text-align: justify;
+      margin-bottom: 40px;
+
+      .policy-paragraph {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        line-height: 130%;
+
+        .policy-paragraph-title {
+          font-size: 22px;
+          font-weight: 500;
+        }
+
+        .policy-paragraph-text {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .policy-paragraph-text-name {
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .policy-actions {
+      display: flex;
+      gap: 30px;
+
+      .button {
+        width: 300px;
+      }
+    }
+  }
+}

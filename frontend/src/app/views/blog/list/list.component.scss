@@ -1,0 +1,151 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.list {
+  margin-top: 80px;
+  margin-bottom: 120px;
+
+  .container {
+    .list-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .list-filters {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .list-applied-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .list-applied-filter {
+          border: 1px solid $light-text-color;
+          border-radius: 5px;
+          color: $light-text-color;
+          padding: 8px 20px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          a {
+            cursor: pointer;
+            display: flex;
+          }
+        }
+      }
+
+      .list-sorting {
+        width: 148px;
+        min-width: 148px;
+        box-sizing: border-box;
+        position: relative;
+
+        .list-sorting-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          padding: 12px 0 12px 23px;
+          color: $dark-text-color;
+        }
+
+        .list-sorting-body {
+          position: absolute;
+          z-index: 3;
+          display: none;
+          flex-direction: column;
+          gap: 14px;
+          padding: 12px 23px;
+          width: 100%;
+          background-color: #FFFFFF;
+          border-radius: 0 0 5px 5px;
+          border: 2px solid #B9D5FD;
+          box-sizing: border-box;
+
+          .list-sorting-item {
+            color: #BEBEBE;
+            cursor: pointer;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+              display: none;
+            }
+
+            input:checked + .label-text{
+              color: $dark-text-color;
+            }
+          }
+        }
+
+        &.open {
+          width: 257px;
+          min-width: 257px;
+
+          .list-sorting-head {
+            background-color: #B9D5FD;
+            border-radius: 5px 5px 0 0;
+            padding-right: 23px;
+            justify-content: space-between;
+          }
+
+          .list-sorting-body {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .list-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 24px;
+      margin-bottom: 60px;
+    }
+
+    .pagination {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      color: $light-text-color;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.disabled svg rect {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      .pagination-pages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .pagination-page {
+          cursor: pointer;
+          padding: 10px;
+          font-size: 20px;
+
+          &.active {
+            color: $dark-text-color;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}
